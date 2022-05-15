@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Справочник доступа к объектам в зависимости от их типов</title>
+</head>
+<body>
+<div th:fragment="TypeAcssList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <link rel="stylesheet" type="text/css" th:href="@{css/imgs/typeacss/typeacss.css}"/>
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;width:53px;height:53px;" class="icon-TypeAcssList"></div>
+        <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+            <span style="">Справочник доступа к объектам в зависимости от их типов</span>
+        </div>
+    </div>
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;">
+        <table th:id="${prefix}+'dgTypeAcss_Module_TypeAcss'" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%">
+            <thead>
+                <tr>
+                    <th data-options="title:'ID',field:'id',width:50,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Наименование группы пользователей',field:'nameGroup',width:350,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Наименование типов объектов',field:'nameTypeObject',width:100000,sortable:true,resizable:true"></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%; max-width:1024px; height:75px;">
+      <div style="display:table;width:100%;">
+       <div style="display:table-row">
+        <div style="display:table-cell;padding:3px; padding-right:0;">
+           <a th:id="${prefix}+'btnAdd_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+           <a th:id="${prefix}+'btnChange_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+           <a th:id="${prefix}+'btnDelete_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+           <a th:id="${prefix}+'btnUpdate_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+            <span style="padding: 0 5px 0 10px; font-weight:bold;">Фильтр:</span>
+            <input  th:id="${prefix}+'txFilter_Module_Typeacss'"  class="easyui-textbox" data-options="multiline:false,width:100,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+       </div>
+        <!--<input th:id="${prefix}+'cbShowDel_Module_Typeacss'" data-options="with:20,height:20,checked:false,disabled:false,label:'Удаленные записи',labelWidth:120,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>-->
+        <div th:id="${prefix}+'pOkCancel_Module_Typeacss'" style="display:table-cell;width:150px;padding: 3px; text-align: right; visibility:hidden;">
+            <a th:id="${prefix}+'btnOk_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+            <a th:id="${prefix}+'btnCancel_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+        </div>
+       </div>
+       <div style="display:table-row;">
+        <div style="display:table-cell;padding:3px;padding-right:0;">
+            <div style="display:table-cell;padding:0;">
+                <a th:id="${prefix}+'btnCodeAll_Module_Typeacss'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Все типы объектов',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+                <select th:id="${prefix}+'cbCodeTypeAcssAll_Module_TypeAcss_TypeAcssFormEdit'"  class="easyui-combobox" data-options="height:30,width:250,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                </select>
+            </div>
+        </div>
+       </div>
+    </div>
+    </div>
+</div>
+</body>
+</html>

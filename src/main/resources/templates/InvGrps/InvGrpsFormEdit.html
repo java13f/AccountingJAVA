@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="InvGrpsFormEdit" class="easyui-window" id="wInvGrpsFormEdit_Module_InvGrps"  data-options="title:'Работа со счетом группы',width:640,height:395,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+        <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;height:53px;">
+                <div  Id="pbEditMode_Module_InvGrps_InvGrpsFormEdit" class="icon-addmode" style="display:table-cell;width:55px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;">
+                    <div style="font-weight:bold;padding:3px;">
+                        <span style="">Работа со счетом группы</span>
+
+                    </div>
+
+                    <div style="padding:3px;">
+                        <span id="lAction_Module_InvGrps_InvGrpsFormEdit"  style="">lAction</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;width:100px;text-align:right;">
+                        <span style="">Идентификатор</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <input  id="txId_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;"></div>
+
+                    <div style="display:table-cell;text-align:right;">
+                        <span style="">Код</span>
+                    </div>
+
+                    <div style="padding:3px;display:inline-block;" id="txCode_Module_InvGrps_InvGrpsFormEdit_toolTip">
+                        <input  id="txCode_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;"></div>
+
+                    <div style="display:table-cell;text-align:right;">
+                        <span style="">Наименование</span>
+                    </div>
+
+                    <div style="padding:3px;display:inline-block;" id="txName_Module_InvGrps_InvGrpsFormEdit_toolTip">
+                        <input  id="txName_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:490,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                    </div>
+                </div>
+            </div>
+
+                <div style="display:table;margin-top:60px;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:70px;text-align:right">
+                            <span style="">Создал</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txCreator_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="width:70px;text-align:right;">
+                            <span style="">Создано</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txCreated_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:70px;;text-align:right;">
+                            <span style="">Изменил</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txChanger_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="display:table-cell;width:70px;;text-align:right;">
+                            <span style="">Изменено</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txChanged_Module_InvGrps_InvGrpsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:38px;"><div style="height:33px;text-align:right;padding:3px;">
+                <a  id="btnOk_Module_InvGrps_InvGrpsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_Module_InvGrps_InvGrpsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="jrWearCalc" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;height:53px;">
+        <div  th:id="${prefix}+'pbEditMode_Module_WearCalc'" class="icon-addmode" style="display:table-cell;width:55px;">
+        </div>
+
+        <div style="display:table-cell;vertical-align:middle;">
+            <div style="font-weight:bold; padding:3px;">
+                <span style="">Расчёт износа</span>
+
+            </div>
+
+            <div style="padding:3px;">
+                <span th:id="${prefix}+'lAction_Module_WearCalc'"  style=""></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  th:id="${prefix}+'dgWear_Module_WearCalc'" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+    <tr><th data-options="title:'Id',field:'id',width:10000,sortable:true,resizable:true,hidden:true"></th>
+        <th data-options="title:'Дата',field:'date',width:10000,sortable:true,resizable:true"></th>
+        <th data-options="title:'Территория',field:'terr',width:10000,sortable:true,resizable:true"></th>
+        <th data-options="title:'Сумма',field:'amount',width:10000,sortable:true,resizable:true"></th>
+        <th data-options="title:'Статус',field:'stts',width:10000,sortable:true,resizable:true"></th>
+    </tr></thead>
+    </table>
+
+    </div>
+
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:125px;"><div style="display:table;">
+        <div style="display:table-row;">
+            <div style="display:table-cell;text-align: right; padding: 5px">
+                <span style="">Дата</span>
+
+            </div>
+
+            <div  Id = "divdbDate_Module_WearCalc" style="display:table-cell">
+                <input th:id="${prefix}+'dbDate_Module_WearCalc'"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false,editable:false"/>
+
+            </div>
+
+            <div th:id="${prefix}+'lbLoaderBlock_Module_WearCalc'" style="display:none;padding: 0px 0px 0px 100px;">
+                <span th:id="${prefix}+'lbLoader_Module_WearCalc'"  style="">Происходит расчёт</span>
+
+            </div>
+
+            <div  th:id="${prefix}+'pbLoaderBlock_Module_WearCalc'" style="display:none;vertical-align:middle;padding: 0px 0px 0px 0px;">
+                <div  th:id="${prefix}+'pbLoader_Module_WearCalc'"  class="easyui-progressbar" data-options="text:'{value}%',width:'200',height:22,value:0"></div>
+
+            </div>
+
+        </div>
+
+        <div style="display:table-row;">
+            <div style="display:table-cell;text-align: right; padding: 5px">
+                <span style="">Территория</span>
+
+            </div>
+
+            <div style="display:table-cell;">
+                <select th:id="${prefix}+'cmbKter_Module_WearCalc'"  class="easyui-combobox" data-options="height:22,width:250,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                </select>
+            </div>
+
+        </div>
+
+        <div style="display:table-row;">
+            <div style="display:table-cell;text-align: right; padding: 5px">
+                <span style="">Статус</span>
+
+            </div>
+
+            <div style="display:table-cell;">
+                <select th:id="${prefix}+'cmbStts_Module_WearCalc'"  class="easyui-combobox" data-options="height:22,width:150,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                </select>
+            </div>
+
+        </div>
+
+    </div>
+
+        <div style="display:block;height:33px;;text-align: right;">
+            <a  th:id="${prefix}+'btnCalc_Module_WearCalc'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Расчёт',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnPrint_Module_WearCalc'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Печать',iconCls:'icon-print',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnCancel_Module_WearCalc'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

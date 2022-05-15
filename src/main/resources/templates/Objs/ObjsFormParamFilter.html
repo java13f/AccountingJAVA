@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+/*th:fragment="ObjsFormParamFilter"*/
+<div th:fragment="ObjsFormParamFilter" class="easyui-window" id="wObjsFormParamFilter_Module_Objs"
+     data-options="title:'Фильтр отображения реквизита в фильтре',width:889,height:550,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-filter',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/objs/objs.css}"/>
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false">
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:55px;">
+            <div style="display:table;height:53px;">
+                <div class="icon-ObjsSettings" style="display:table-cell;width:55px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding:3px">
+                    <span style="">Фильтр отображения реквизитов в списке</span>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:100%;">
+            <div style="display:block;height:375px;">
+                <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false">
+                    <div id="rListParams_Module_Objs_ObjsFormParamFilter"
+                         data-options="region:'west',collapsible:false,split:false,title:'Дополнительные реквизиты',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+                         style="width:450px;height:100%;">
+                        <div id="lpList_Module_Objs_ObjsFormParamFilter" class="easyui-datalist"></div>
+                    </div>
+                    <div id="rPeriodParams_Module_Objs_ObjsFormParamFilter"
+                         data-options="region:'center',collapsible:false,split:false,title:'Переодические реквизиты',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+                         style="width:100%;height:100%;">
+                        <div id="ppList_Module_Objs_ObjsFormParamFilter" class="easyui-datalist"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="display:block;height:40px;">
+                <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false">
+                    <div data-options="region:'west',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+                         style="width:450px;height:100%;text-align:right;padding:3px"><a
+                            id="btnSelAllLP_Module_Objs_ObjsFormParamFilter" href="javascript:void(0)"
+                            class="easyui-linkbutton"
+                            data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-ObjsTickDark',iconAlign:'left',size:'small'"></a>
+
+                        <a id="btnDelAllLP_Module_Objs_ObjsFormParamFilter" href="javascript:void(0)"
+                           class="easyui-linkbutton"
+                           data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-ObjsCloseDark',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+                    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+                         style="width:100%;height:100%;text-align:right;padding:3px"><a
+                            id="btnSelAllPP_Module_Objs_ObjsFormParamFilter" href="javascript:void(0)"
+                            class="easyui-linkbutton"
+                            data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-ObjsTickDark',iconAlign:'left',size:'small'"></a>
+
+                        <a id="btnDelAllPP_Module_Objs_ObjsFormParamFilter" href="javascript:void(0)"
+                           class="easyui-linkbutton"
+                           data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-ObjsCloseDark',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:38px;">
+            <div style="height:33px;text-align:right;padding:3px">
+                <a id="btnOk_Module_Objs_ObjFormParamFilter" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a id="btnCancel_Module_Objs_ObjFormParamFilter" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

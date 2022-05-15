@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--ВНИМЕНИЕ! Добавлен фрагмент th:fragment="ObjsFormList"-->
+<div th:fragment="ObjsFormList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+
+    <!--ВНИМЕНИЕ! Добавлен фрагмент вручную-->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/objs/objs.css}"/>
+
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+         style="width:100%;height:55px;">
+        <div style="display:table;">
+            <div class="icon-ObjsList" style="display:table-cell;width:53px;height:53px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold; padding-left:5px;">
+                <span style="">Перечень объектов учета за</span>
+
+                <input th:id="${prefix}+'cbCheckDate_Module_Objs'"
+                       data-options="with:20,height:20,checked:false,disabled:false,labelPosition:'before',labelAlign:'left'"
+                       class="easyui-checkbox"/>
+
+                <!--ВНИМЕНИЕ! Добавлен фрагмент editable:false - что бы DateBox не было возможности писать что-либо-->
+                <input th:id="${prefix}+'dtDate_Module_Objs'" type="text" class="easyui-datebox"
+                       data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:true,editable:false"/>
+
+                <span style="">дату</span>
+            </div>
+            <div style="display:table-cell;vertical-align:middle;padding-left:5px;">
+                <span style=""><i>(ввода в эксплуатацию)</i></span>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-options="region:'center',collapsible:false,split:true,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+         style="width:100%;height:50%;">
+
+        <div data-options="region:'center',collapsible:false,split:true,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+             style="width:100%;height:36%;">
+            <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+                <table th:id="${prefix}+'dgObjs_Module_Objs'" class="easyui-datagrid" data-options="fitColumns:false,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,
+scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%">
+
+                    <!--ВНИМЕНИЕ! Добавлен фрагмент когда, закрпеляет одну колонку в начале. -->
+                    <thead data-options="frozen:true">
+                    <tr>
+                        <th data-options="field:'inv', width: 140, sortable: true, resizable: true, fixed: true">Инв.
+                            №
+                        </th>
+                    </tr>
+                    </thead>
+                    <!--Конец фрагмента-->
+                    <thead>
+                    <tr></tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+        <!--ВНИМЕНИЕ! Добалвен фрагмент кода пагинатор-->
+        <div th:id="${prefix}+'dgObjsPager_Module_Objs'" style="background:#efefef;border:1px solid #ccc;"></div>
+
+        <div class="easyui-panel" style="width:100%;height:58%;">
+            <div th:id="${prefix}+'WebDoc_Module_Objs'"
+                 data-options="region:'center',collapsible:false,split:true,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+                 style="width:100%;height:50%;">
+            </div>
+        </div>
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null"
+         style="width:100%;height:39px;">
+        <div style="display:table;width:100%;">
+
+            <div style="display:table-cell;padding:3px">
+                <a th:id="${prefix}+'btnAdd_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                <a th:id="${prefix}+'btnChange_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                <a th:id="${prefix}+'btnDelete_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                <a th:id="${prefix}+'btnUpdate_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                <a th:id="${prefix}+'btnFilter_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-ObjsFilt',iconAlign:'left',size:'small'"></a>
+
+                <a th:id="${prefix}+'btnToolsDgv_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-ObjsTools',iconAlign:'left',size:'small'"></a>
+
+
+                <a th:id="${prefix}+'btnPrint_Module_Objs'" menu="#mm_Module_Objs" href="javascript:void(0)"
+                   class="easyui-splitbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Печать',iconCls:'icon-print',iconAlign:'left',size:'small',menuAlign:'left',duration:100,showEvent:'mousedown',hideEvent:'mouseleave',hasDownArrow:true"></a>
+                <div id="mm_Module_Objs" style="width:150px;">
+                    <div id="btnPrintCard_Module_Objs" iconCls="icon-ObjsFile">Карточка объекта</div>
+                    <div id="btnPrintList_Module_Objs" iconCls="icon-ObjsFile">Список объектов</div>
+                </div>
+
+            </div>
+
+            <div th:id="${prefix}+'pOkCancel_Module_Objs'"
+                 style="display:table-cell;width:150px;padding:3px; text-align:right;visibility:hidden;">
+                <a th:id="${prefix}+'btnOk_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+                <a th:id="${prefix}+'btnCancel_Module_Objs'" href="javascript:void(0)" class="easyui-linkbutton"
+                   data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

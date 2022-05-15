@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:fragment="OrderFieldsFormEdit" class="easyui-window" id="wOrderFieldsFormEdit_Module_OrderFields"  data-options="title:'Редактирование записи справочника',width:712,height:340,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;height:53px;">
+            <div  Id="pbEditMode_OrderFields_OrderFieldsFormEdit" class="icon-addmode" style="display:table-cell;width:55px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="font-weight:bold; padding:3px;">
+                    <span style="">Работа с полем заявки</span>
+
+                </div>
+
+                <div style="padding:3px;">
+                    <span id="lAction_Module_OrderFields_OrderFieldsFormEdit"  style="">lAction</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;">
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="display:table-cell;width:165px;text-align: right">
+                    <span style="">Идентификатор</span>
+
+                </div>
+
+                <div style="display:table-cell;padding:3px">
+                    <input  id="txId_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="display:table-cell;width:165px;text-align: right">
+                    <span style="">Код</span>
+
+                </div>
+
+                <div style="display:table-cell;padding:3px">
+                    <input  id="txCode_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;width:15px;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="display:table-cell;width:165px;text-align: right">
+                    <span style="">Наименование</span>
+
+                </div>
+
+                <div style="display:table-cell;padding:3px">
+                    <input  id="txName_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:490,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+            </div>
+
+        </div>
+
+            <div style="display:table;margin-top:15px">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:60px;text-align:right">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input  id="txCreator_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;width:70px;text-align:right">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input  id="txCreated_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:60px;text-align:right">
+                        <span style="">Изменил</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input  id="txChanger_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;width:70px;text-align:right">
+                        <span style="">Изменено</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input  id="txChanged_Module_OrderFields_OrderFieldsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:38px;"><div style="height:33px;text-align:right;padding:3px">
+            <a  id="btnOk_Module_OrderFields_OrderFieldsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnCancel_Module_OrderFields_OrderFieldsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

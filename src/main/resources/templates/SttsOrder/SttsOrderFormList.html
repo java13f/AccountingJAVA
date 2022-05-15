@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="SttsOrderFormList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+    <div th:id="${prefix}+'dEditorIndex_Module_SttsOrder'" style="visibility: hidden">-1</div>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/sttsorder/sttsorder.css}"/>
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:58px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;padding:3px;">
+            <div class="icon-SttsOrderIconDirectory" style="display:table-cell;width:50px;height:50px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:3px;">
+                <span style="">Доступность полей заявки в зависимости от группы доступа и статуса</span>
+
+            </div>
+
+        </div>
+
+        <div style="display:table-cell;vertical-align:middle;width:180px;">
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+                <span style="">В-видимое Д-доступное НД- не доступное</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:95%;">
+
+        <table  th:id="${prefix}+'dgSttsOrder_Module_SttsOrder'"
+                class="easyui-datagrid"
+data-options="
+fitColumns:true,
+autoRowHeight:true,
+striped:false,
+method:'get',
+nowrap:true,
+idField:'id',
+loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',
+pagination:false,
+rownumbers:false,
+singleSelect:true,
+ctrlSelect:false,
+checkOnSelect:true,
+selectOnCheck:true,
+scrollOnSelect:true,
+sortOrder:'asc',
+multiSort:false,
+remoteSort:false,
+showHeader:true,
+showFooter:false,
+scrollbarSize:18,rownumberWidth:30,editorHeight:24
+"
+                width="100%" height="100%">
+            <thead >
+                <tr></tr>
+            </thead>
+        </table>
+
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:50px;"><div style="display:table;width:100%;height:48px;">
+        <div style="display:table-cell;vertical-align:middle;padding:3px;">
+            <div style="display:inline-block;padding-left:5px;font-weight:bold;">
+                <span style="">Гр.</span>
+
+            </div>
+
+            <select th:id="${prefix}+'cbGroups_Module_SttsOrder'"  class="easyui-combobox" data-options="height:24,width:250,panelHeight:200,selectOnNavigation:true,editable:true,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+            </select>
+            <div style="display:inline-block;padding-left:5px;font-weight:bold;">
+                <span style="">Тип заявки</span>
+
+            </div>
+
+            <select th:id="${prefix}+'cbOrdertypes_Module_SttsOrder'"  class="easyui-combobox" data-options="height:24,width:200,panelHeight:200,selectOnNavigation:true,editable:true,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+            </select>
+
+            <a th:id="${prefix}+'btnTransfer_Module_SttsOrder'" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Перенос',iconAlign:'left',size:'small'"></a>
+        </div>
+
+        <div  th:id="${prefix}+'pUpdate_Module_SttsOrder'" style="display:table-cell;vertical-align:middle;width:100px;padding:3px;text-align:right;">
+            <a  th:id="${prefix}+'btnUpdate_Module_SttsOrder'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+        </div>
+
+    </div>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>

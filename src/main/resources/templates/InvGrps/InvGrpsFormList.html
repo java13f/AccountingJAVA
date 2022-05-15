@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div th:fragment="InvGrpsFormList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/invgrps/invgrps.css}"/>
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+        <div class="icon-InvGrpsIconDirectory" style="display:table-cell;width:53px;height:53px;">
+        </div>
+
+        <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+            <span style="">Счета по группам инвентарного учета</span>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div  th:id="${prefix}+'trgtrg'" style="display:table;vertical-align:middle;width:100%;height:7%;">
+        <div style="display:table-row;">
+            <div style="display:table-cell;vertical-align:middle;width:100%;padding-left:10px;">
+                <span style="">Группа инвентарного учета</span>
+
+                <select th:id="${prefix}+'cbInvGrpsList_Module_InvGrps'"  class="easyui-combobox" data-options="height:22,width:400,panelHeight:200,selectOnNavigation:true,editable:true,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                </select>
+                <div style="display:inline;width:100%;padding:3px;text-align:left;">
+                    <a  th:id="${prefix}+'btnGrAdd_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    <a  th:id="${prefix}+'btnGrChange_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  th:id="${prefix}+'btnGrDelete_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                    <a  th:id="${prefix}+'btnGrUpdate_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                    <input  th:id="${prefix}+'cbGrShowDel_Module_InvGrps'" data-options="with:1,height:20,checked:false,disabled:false,label:'Удаленные записи',labelWidth:120,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox" name="showDel"/>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+        <div style="display:table;width:100%;height:92%;">
+            <table  th:id="${prefix}+'dgInvGrps_Module_InvGrps'" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+            <tr><th data-options="title:'ID',field:'id',width:80,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Код',field:'code',width:100,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Тэг',field:'tag',width:100,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Процент износа',field:'perc',width:110,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Наименование',field:'name',width:10000,sortable:true,resizable:true"></th>
+            </tr></thead>
+            </table>
+
+        </div>
+
+    </div>
+    <div  data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;padding:3px;">
+            <a  th:id="${prefix}+'btnAccAdd_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnAccChange_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnAccDelete_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnAccUpdate_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+            <input  th:id="${prefix}+'cbAccShowDel_Module_InvGrps'" data-options="with:1,height:20,checked:false,disabled:false,label:'Удаленные записи',labelWidth:120,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox" name="showDel"/>
+
+        </div>
+
+        <div  th:id="${prefix}+'pOkCancel_Module_InvGrps'" style="display:table-cell;width:150px;padding:3px;text-align:right;visibility:hidden;">
+            <a  th:id="${prefix}+'btnOk_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnCancel_Module_InvGrps'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

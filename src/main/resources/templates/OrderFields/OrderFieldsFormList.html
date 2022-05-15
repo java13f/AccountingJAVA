@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div th:fragment="OrderFieldsFormList" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+        <div class="icon-KterIconDirectory" style="display:table-cell;width:53px;height:53px;">
+        </div>
+
+        <div style="display:table-cell;vertical-align:middle;font-weight:bold; padding-left:5px">
+            <span style="">Справочник полей заявки</span>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;">
+        <table id ="dgOrderFields" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+    <tr><th data-options="title:'Id',field:'id',width:80,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Код',field:'code',width:100,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Наименование',field:'name',width:100000,sortable:true,resizable:true"></th>
+    </tr></thead>
+    </table>
+
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;padding:3px">
+            <a  th:id="${prefix}+'btnAdd_Module_OrderFields'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnChange_Module_OrderFields'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnDelete_Module_OrderFields'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnUpdate_Module_OrderFields'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+            <div style="display:inline-block;padding-left:5px;font-weight:bold;">
+                <span style="">Фильтр:</span>
+
+                <input  th:id="${prefix}+'txFilter_Module_OrderFields'"  class="easyui-textbox" data-options="multiline:false,width:100,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                <input  th:id="${prefix}+'cbShowDel_Module_OrderFields'" data-options="with:20,height:20,checked:false,disabled:false,label:'Удалённые записи',labelWidth:125,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+            </div>
+
+        </div>
+
+        <div style="display:table-cell;padding:3px;text-align:right;visibility:hidden;">
+            <a  th:id="${prefix}+'btnOk_Module_OrderFields'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnCancel_Module_OrderFields'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+
+</body>
+</html>

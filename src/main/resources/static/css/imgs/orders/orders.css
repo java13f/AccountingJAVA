@@ -1,0 +1,29 @@
+.icon-OrdersIconDirectory {
+    background: url('./OrdersIconDirectory.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.icon-OrdersTypesIcon {
+    background: url('./OrderTypesList.png') no-repeat center center;
+    background-size: cover;
+}
+
+.icon-excel {
+    background: url('./excel.png') no-repeat center center;
+    background-size: cover;
+}
+
+.icon-formFilter {
+    background: url('./filter.gif') no-repeat center center;
+    background-size: cover;
+}
+
+.icon-formFilterParams {
+    background: url('./filterParams.png') no-repeat center center;
+    background-size: cover;
+}
+
+.icon-file {
+    background: url('./file.png') no-repeat center center;
+    background-size: cover;
+}

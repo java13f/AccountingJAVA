@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div  th:fragment="jrOSXList" class="easyui-layout"   data-options="title:'Опись инвентарных карточек по учету необоротных активов',collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+        <div style="display:block;height:350px;">
+            <div class="easyui-layout" style="width:100%;height:350px;" data-options="fit:false" >
+
+                <div th:id="rjrOSX_Module_jrOSX"  data-options="region:'west',collapsible:false,split:false,title:'Список счетов',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:365,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:380px;height:100%;">
+
+                    <div id="lpList_Module_jrOSXList" class="easyui-datalist"></div>
+                </div>
+
+                <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:350,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;padding-top: 80px">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:0px;">
+                        </div>
+                        <div style="display:table-cell;width:20px;text-align:right;">
+                            <span style="">Территория</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:5px;">
+
+                            <div  th:id="divKter_Module_jrOSX" style="display:inline-block;">
+                                <input  id="txKter_Module_jrOSXList"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'left',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <a  id="btnKter_Module_jrOSXList"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:30,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                    <div style="display:table;">
+                        <div style="display:table-row;">
+                            <div style="display:table-cell;width:3px;">
+                            </div>
+
+                            <div style="display:table-cell;width:88px;height:31px;text-align:right;">
+                                <span style="">Дата начала</span>
+
+                            </div>
+
+                            <div style="display:table-cell;padding:5px;">
+                                <div  th:Id="divtbDateBuy_Module_jrOSX" style="display:inline-block;">
+                                    <input id="txDateBuy_Module_jrOSXList"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div style="display:table-row;">
+                            <div style="display:table-cell;width:3px;">
+                            </div>
+
+                            <div style="display:table-cell;width:200px;height:30px;text-align:right;">
+                                <span style="">Дата окончания</span>
+
+                            </div>
+
+                            <div style="display:table-cell;padding:5px;">
+                                <div  th:Id="divtbDateEx_Module_jrOSX" style="display:inline-block;">
+                                    <input id="txDateEx_Module_jrOSXList"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div style="display:table-row;">
+                            <div style="display:table-cell;width:11px;">
+                            </div>
+
+                            <div style="display:table-cell;width:210px;height:30px;text-align:right;padding:5px">
+                                <span style="">Групповой отчет</span>
+
+                            </div>
+
+                            <input id="chGroup_Module_jrOSXList"  data-options="with:20,height:20,checked:false,disabled:false,labelPosition:'before',labelAlign:'left'" class="easyui-checkbox"/>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:38px;"><div style="height:33px;text-align:right;padding:3px">
+        <a  id="btnOk_Module_jrOSXList"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+        <a  id="btnCancel_Module_jrOSXList"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+    </div>
+
+    </div>
+</div>
+
+</div>
+
+<!--</div>-->
+
+</body>
+</html>

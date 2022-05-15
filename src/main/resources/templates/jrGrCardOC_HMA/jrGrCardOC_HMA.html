@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div th:fragment="jrGrCardOC_HMA" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;">
+        <div style="display:table;">
+            <div class="icon-large-smartart" style="display:table-cell;width:53px;height:53px;"></div>
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+                <span style="">Запрос параметров (для формы ОС-9)</span>
+            </div>
+        </div>
+    </div>
+    <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;">
+        <div style="height:50px;"></div>
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:200px;padding-right:15px;text-align:right;">
+                        <span style="">Сформировать отчет ЗА </span>
+                    </div>
+                    <div style="display:table-cell;">
+                        <span id='hintAreaDtBx'>
+                            <input th:id="${prefix}+'dtDate_Module_jrGrCardOC_HMA'"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                        </span>
+                    </div>
+                </div>
+                <div style="display:table-row;height:30px;"></div>
+                <div style="display:table-row;">
+                    <div style="display:table-cell;padding-right:15px;text-align:right;">
+                        <span style="">Выберите объект</span>
+                    </div>
+                    <div style="display:table-cell;">
+                        <span id='hintAreaTxBx' style="width: 100px;"></span>
+                        <input  th:id="${prefix}+'txtBxName_Module_jrGrCardOC_HMA'"  class="easyui-textbox" data-options="multiline:false,width:350,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                        <a  th:id="${prefix}+'btnObjs_Module_jrGrCardOC_HMA'"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:32,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;">
+        <div style="display:table;width:100%;">
+            <div style="display:table-cell;padding:3px;"></div>
+            <div style="display:table-cell;width:150px;padding:3px;text-align:right;">
+                <a  th:id="${prefix}+'btnOk_Module_jrGrCardOC_HMA'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+                <a  th:id="${prefix}+'btnCancel_Module_jrGrCardOC_HMA'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+            </div>
+         </div>
+    </div>
+ </div>
+</body>
+</html>

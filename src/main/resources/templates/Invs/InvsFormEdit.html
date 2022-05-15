@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:fragment="InvsFormEdit" class="easyui-window" id="wInvsFormEdit_Module_Invs"  data-options="title:'Работа с записью инвентаризации',width:1050,height:648,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+        <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;height:53px;">
+                <div  Id="pbEditMode_Module_Invs_InvsFormEdit" class="icon-addmode" style="display:table-cell;width:55px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;">
+                    <div  Id="lAction_Module_Invs" style="font-weight:bold;padding:3px;">
+                        <span id="lAction_Module_Invs_InvsFormEdit"  style="">lAction</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;margin-top:15px">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:97px;">
+                    </div>
+
+                    <div style="display:table-cell;text-align:right;">
+                        <span style="">Id</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <input  id="txId_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:80,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        <span style="">Наименование</span>
+                        <div  Id="divtbName_Module_Invs" style="display:inline-block;">
+                        <input  id="txName_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:470,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:0px;">
+                    </div>
+
+                </div>
+
+            </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:0px;">
+                        </div>
+
+                        <div style="display:table-cell;width:250px;text-align:right;">
+                            <span style="">Материально-ответственное лицо(а)</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:20px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Должность</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbMatrePost1_Module_Invs" style="display:inline-block;">
+                            <input  id="txMatrePost1_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:450,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <span style="">ФИО</span>
+                            <div  Id="divtbMatrePostUserId1_Module_Invs" style="display:inline-block;">
+                            <input  id="txMatrePostUserId1_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <a  id="btnMatrePostUserId1_Module_Invs_InvsFormEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:30,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                        <div style="display:table-cell;">
+                            <a  id="btnClearMatrePostUserId1_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:20px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Должность</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbMatrePost2_Module_Invs" style="display:inline-block;">
+                            <input  id="txMatrePost2_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:450,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <span style="">ФИО</span>
+                            <div  Id="divtbMatrePostUserId2_Module_Invs" style="display:inline-block;">
+                            <input  id="txMatrePostUserId2_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <a  id="btnMatrePostUserId2_Module_Invs_InvsFormEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:30,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                        <div style="display:table-cell;">
+                            <a  id="btnClearMatrePostUserId2_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:43px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Должность</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbMatrePost3_Module_Invs" style="display:inline-block;">
+                            <input  id="txMatrePost3_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:450,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <span style="">ФИО</span>
+                            <div  Id="divtbMatrePostUserId3_Module_Invs" style="display:inline-block;">
+                            <input  id="txMatrePostUserId3_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <a  id="btnMatrePostUserId3_Module_Invs_InvsFormEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:30,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                        <div style="display:table-cell;">
+                            <a  id="btnClearMatrePostUserId3_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="display:table;margin-top:10px;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Номер приказа</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbOrderNumb_Module_Invs" style="display:inline-block;">
+                            <input  id="txOrderNumb_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Дата приказа</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbDateOrd_Module_Invs" style="display:inline-block;">
+                            <input id="txDateOrd_InvsFormEdit"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Дата составления</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbDatePrep_Module_Invs" style="display:inline-block;">
+                            <input id="txDatePrep_InvsFormEdit"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                            </div>
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Дата по состоянию на:</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbDateAsOf_Module_Invs" style="display:inline-block;">
+                            <input id="txDateAsOf_InvsFormEdit"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Дата начала инв.</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbDateBegin_Module_Invs" style="display:inline-block;">
+                            <input id="txDateBegin_InvsFormEdit"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                            </div>
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Дата окончания инв.</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbDateEnd_Module_Invs" style="display:inline-block;">
+                            <input id="txDateEnd_InvsFormEdit"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align:left;">
+                            <span style="">Председатель коммисии:</span>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:115px;text-align:right">
+                            <span style="">Должность</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbCommisChPost_Module_Invs" style="display:inline-block;">
+                            <input  id="txCommisChPost_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:450,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                        </div>
+
+                        <div style="width:35px;text-align:right;">
+                            <span style="">ФИО</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbCommisChFioUserId_Module_Invs" style="display:inline-block;">
+                            <input  id="txCommisChFioUserId_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <a  id="btnCommisChFioUserId_Module_Invs_InvsFormEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:30,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+
+                        <div style="display:table-cell;">
+                            <a  id="btnClearCommisChFioUserId_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align:left;">
+                            <span style="">Проверил:</span>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:60px;text-align:right">
+                            <span style="">Должность</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbCheckPost_Module_Invs" style="display:inline-block;">
+                            <input  id="txCheckPost_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:450,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                        </div>
+
+                        <div style="width:35px;text-align:right;">
+                            <span style="">ФИО</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <div  Id="divtbCheckFioUserId_Module_Invs" style="display:inline-block;">
+                            <input  id="txCheckFioUserId_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:300,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+                            </div>
+                            <a  id="btnCheckFioUserId_Module_Invs_InvsFormEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:30,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                        <div style="display:table-cell;">
+                            <a  id="btnClearCheckFioUserId_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div style="display:table;margin-top:12px;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:190px;text-align:right">
+                            <span style="">Создал</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txCreator_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="width:70px;text-align:right;">
+                            <span style="">Создано</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txCreated_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:190px;text-align:right;">
+                            <span style="">Изменил</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txChanger_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="display:table-cell;text-align:right;">
+                            <span style="">Изменено</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px;">
+                            <input  id="txChanged_Module_Invs_InvsFormEdit"  class="easyui-textbox" data-options="multiline:false,width:267,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:38px;"><div style="height:33px;text-align:right;padding:3px;">
+                <a  id="btnOk_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_Module_Invs_InvsFormEdit"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

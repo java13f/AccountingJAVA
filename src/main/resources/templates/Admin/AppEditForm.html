@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="AppEditForm" class="easyui-window" id="wAppEdit_Module_Admin"  data-options="title:'Работа с приложениями',width:744,height:460,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;height:53px;">
+            <div  Id="pbEditMode_Module_Admin_AppEdit" class="icon-addmode" style="display:table-cell;vertical-align:middle;width:55px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="font-weight:bold;padding:3px;">
+                    <span style="">Работа с приложениями</span>
+
+                </div>
+
+                <div style="padding:3px;">
+                    <span id="lAction_Module_Admin_AppEdit"  style="">lAction</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;width:480px;">
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="width:170px;text-align:right;">
+                    <span style="">Идентификатор записи</span>
+
+                </div>
+
+                <div style="display:table-cell;width:295px;padding:3px;">
+                    <input  id="txId_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                </div>
+
+            </div>
+
+        </div>
+
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;width:170px;text-align:right;">
+                        <span style="">Рдительское приложение</span>
+
+                    </div>
+
+                    <div style="display:table-cell;width:493px;;padding:3px;">
+                        <input  id="txAppParent_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:490,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'icon-search',buttonAlign:'right'" />
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <a  id="btnClearAppParent_Module_Admin_AppEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;width:170px;text-align:right;">
+                        <span style="">Имя модуля Dll</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px">
+                        <input  id="txCode_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:126,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <span style="">Имя модуля js</span>
+
+                    </div>
+
+                    <div style="">
+                        <input  id="txCodeJs_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:127,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                    <div style="display:table-cell;text-align:right;">
+                        <span style="">Функция</span>
+
+                    </div>
+
+                    <div style="display:table-cell;width:100px;padding:3px;">
+                        <input  id="txFunc_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:126,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:185px;">
+                    </div>
+
+                    <div style="display:table-cell;width:245px;;padding:3px;">
+                        <input id="cbManagedModul_Module_Admin_AppEdit" data-options="with:30,height:20,checked:false,disabled:false,label:'Управляемый модуль (.Net)',labelWidth:180,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                    </div>
+
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;width:270px;padding:3px;">
+                        <select id="cbModulType_Module_Admin_AppEdit"  class="easyui-combobox" data-options="height:30,width:265,panelHeight:100,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                        </select>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;width:170px;text-align:right;">
+                        <span style="">Имя приложения</span>
+
+                    </div>
+
+                    <div style="display:table-cell;width:529px;padding:3px;">
+                        <input  id="txName_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:525,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:185px;text-align:right;">
+                    <span style="">Название приложения</span>
+
+                </div>
+
+                <div style="display:table-cell;width:245px;padding:3px;">
+                    <select id="cbAppName_Module_Admin_AppEdit"  class="easyui-combobox" data-options="height:30,width:245,panelHeight:100,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                    </select>
+                </div>
+
+                <div style="display:table-cell;">
+                    <span style="">Код сортировки</span>
+
+                </div>
+
+                <div style="padding:3px;">
+                    <input  id="txSortCode_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:179,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                </div>
+
+            </div>
+
+            <div style="display:table;margin-top:20px;padding:3px;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <input  id="txCreator_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:285,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <span style="">Создано</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <input  id="txCreated_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:285,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;">
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <span style="">Изменил</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:3px;">
+                        <input  id="txChanger_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:285,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                        <span style="">Изменено</span>
+
+                    </div>
+
+                    <div style="padding:3px;">
+                        <input  id="txChanged_Module_Admin_AppEdit"  class="easyui-textbox" data-options="multiline:false,width:285,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:38px;text-align:right;"><div style="height:33px;text-align:right;padding:3px;">
+            <a  id="btnOk_Module_Admin_AppEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnCancel_Module_Admin_AppEdit"  href="#" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

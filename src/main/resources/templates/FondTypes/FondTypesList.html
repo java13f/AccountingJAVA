@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="FondTypesList"  class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/fondtypes/FondTypesIcon.css}"/>
+    <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+<!--        <div style="display:table-cell;vertical-align:middle;width:53px;height:53px;">-->
+<!--        </div>-->
+    <div class="cssclass: icon-FondTypesIcon" style="display:table-cell;vertical-align:middle;width:53px;height:53px;">
+    </div>
+        <div style="vertical-align:middle;font-weight:bold;padding-left:5px;margin-top: 18px">
+            <span style="">Справочник типов фондов</span>
+
+        </div>
+
+    </div>
+
+    </div>
+    <div   data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table th:id="${prefix}+'dgFT_Module_FondTypes'" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+    <tr><th data-options="title:'ID',field:'id',width:80,sortable:true,resizable:true,fixed:true"></th>
+        <th data-options="title:'Код ',field:'code',width:2000,sortable:true,resizable:true"></th>
+        <th data-options="title:'Наименование',field:'name',width:10000,sortable:true,resizable:true"></th>
+    </tr></thead>
+    </table>
+
+    </div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="">
+        <div style="display:table;width:100%;">
+            <div style="display:table-cell;padding:3px;">
+                <a  th:id="${prefix}+'btnAdd_Module_FondTypes'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Добавить ',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                <a  th:id="${prefix}+'btnChange_Module_FondTypes'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                <a  th:id="${prefix}+'btnDelete_Module_FondTypes'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+
+                <a  th:id="${prefix}+'btnUpdate_Module_FondTypes'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+
+                <div style="display:inline-block;padding-left:5px;font-weight:bold;. ">
+                    <input th:id="${prefix}+'cbShowDel_Module_FondTypes'" data-options="with:20,height:20,checked:false,disabled:false,label:'Удленные записи',labelWidth:120,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                </div>
+
+            </div>
+
+            <div  th:id="${prefix}+'pOkCancel_Module_FondTypes'" style="display:table-cell;width:150px;padding:3px;text-align:right;visibility:hidden;">
+                <a  th:id="${prefix}+'btnOk_Module_FondTypes'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  th:id="${prefix}+'btnCancel_Module_FondTypes'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </div>
+</div>
+
+
+</body>
+</html>

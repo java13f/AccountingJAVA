@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html style="height:100%" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>АС Учёт</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/themes/gray/easyui.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/themes/icon.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/themes/app.css}"/>
+    <script type="text/javascript" th:src="@{/scripts/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/Core.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/jquery.easyui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/easyui-lang-ru.js}"></script>
+    <script type="text/javascript" th:src="@{/scripts/Keys.js}"></script>
+    <div sec:authorize="isAuthenticated()" th:remove="tag">
+        <script type="text/javascript" th:src="@{/Modules/Core/LockService.js}"></script>
+        <script type="text/javascript" th:src="@{/Modules/Core/Filters.js}"></script>
+    </div>
+</head>
+<body class="panel-fit" style="height:100%;user-select:none;">
+    <div id="app" style="height:100%"></div>
+    <div id="ModalWindows"></div>
+    <div sec:authorize="isAuthenticated()" th:remove="tag">
+        <script type="text/javascript" th:inline="javascript">
+            $( document ).ready(function() {
+                Keys.InitKeys();
+                contextPath = /*[[${#request.contextPath}]]*/ "";
+                import(contextPath+"/Modules/MainApp/MainApp.js").then(module => module.StartApp(true));
+            });
+        </script>
+    </div>
+    <div sec:authorize="isAnonymous()" th:remove="tag">
+        <script type="text/javascript" th:inline="javascript">
+            $( document ).ready(function() {
+                Keys.InitKeys();
+                contextPath = /*[[${#request.contextPath}]]*/ "";
+                import(contextPath+"/Modules/MainApp/MainApp.js").then(module => module.StartApp(false));
+            });
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+<div th:id="${prefix}+'jrWin_Module_JasperView'" th:fragment="Jasper" class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true">
+
+    <!--ВНИМЕНИЕ! Добавлен фрагмент вручную-->
+    <link rel="stylesheet" type="text/css"th:href="@{/css/imgs/jasper/jasper.css}"/>
+
+
+
+    <div th:id="${prefix}+'divArea_Module_JasperView'"  data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"></div>
+    <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+        <div style="display:table-cell;width:85;padding:3px;">
+            <a  th:id="${prefix}+'btnUpdate_Module_JasperView'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnPrint_Module_JasperView'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:85,toggle:false,selected:false,plain:false,text:' Печать ',iconCls:'icon-print',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnWord_Module_JasperView'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'В Word',iconCls:'icon-word',iconAlign:'left',size:'small'"></a>
+
+            <a  th:id="${prefix}+'btnExcel_Module_JasperView'"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'В Excel',iconCls:'icon-excel',iconAlign:'left',size:'small'"></a>
+
+
+
+<!--            <a href="javascript:void(0)" id="sb" class="easyui-splitbutton" data-options="menu:'#nested_mm_Module_JasperView',iconCls:'icon-save'">Экспорт</a>-->
+<!--            <div id="nested_mm_Module_JasperView" style="width:100px;">-->
+<!--                <div data-options="iconCls:'icon-word'"  >Word</div>-->
+<!--                <div data-options="iconCls:'icon-excel'" >Excel</div>-->
+<!--            </div>-->
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

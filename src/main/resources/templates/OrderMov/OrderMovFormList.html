@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="OrderMovFormList" class="easyui-window" id="wOrderMov_Modul_OrderMov"
+     data-options="title:'Заявка на перемещение',width:1000,height:618,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,noheader:false,collapsed:false,minimized:false,maximized:false">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/ordermov/OrderMov.css}"/>
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:350px;"><div style="display:table;width:100%;border-bottom-style:solid; border-width:thin">
+            <div class="icon-OrderMov" style="display:table-cell;width:53px;height:53px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+                <span id="lblHeader_Module_OrderMov"  style="">Заявка на перемещение компьютерной техники</span>
+
+            </div>
+
+        </div>
+
+            <div style="display:table;width:100%;">
+                <div style="display:table;height:30px;">
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:40px;">
+                        </div>
+
+                        <div style="vertical-align:bottom;text-align:right">
+                            <span style="">Ид.</span>
+
+                        </div>
+
+                        <div style="display:table-cell;width:100px;">
+                        </div>
+
+                        <div style="">
+                            <input  id="txId_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:130,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                        <div style="display:table-cell;width:50px;text-align:right">
+                            <span id="lblNumber_Module_OrderMov"  style="">Номер</span>
+
+                        </div>
+
+                        <div  Id="cellNo_Module_OrderMov" style="display:table-cell;width:140px;text-align:right">
+                            <div  Id="divtbNo_Module_OrderMov" style="display:inline-block;">
+                                <input  id="txNumber_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:130,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                            </div>
+
+                        </div>
+
+                        <div style="display:table-cell;width:245px;">
+                        </div>
+
+                        <div style="">
+                            <span id="lblDate_Module_OrderMov"  style="">Дата</span>
+
+                        </div>
+
+                        <div  Id="cellDt_Module_OrderMov" style="display:table-cell;width:190px;text-align:right">
+                            <div  Id="divdtDate_Module_OrderMov" style="display:inline-block;">
+                                <input id="dtDate_Module_OrderMov"  type="text" class="easyui-datebox" data-options="panelWidth:250,editable:false,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false"/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:40px;">
+                        </div>
+
+                        <div style="display:table-cell;">
+                            <span id="lblInit_Module_OrderMov"  style="">Инициатор</span>
+
+                        </div>
+
+                        <div style="display:table-cell;width:56px;">
+                        </div>
+
+                        <div  Id="cellInit_Module_OrderMov" style="display:table-cell;">
+                            <div  Id="divtbInit_Module_OrderMov" style="display:inline-block;">
+                                <input  id="tbInit_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:295,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                            </div>
+
+                        </div>
+
+                        <div style="display:table-cell;padding:3px">
+                            <a  id="btnInit_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                        </div>
+
+                        <div style="display:table-cell;">
+                            <div style="display:table;">
+                                <div style="display:table-row;padding:3px">
+                                    <div  Id="blockGiveTo_Module_OrderMov" style="">
+                                        <div style="display:table-cell;width:83px;text-align:right">
+                                            <span id="labelgiveto_Module_OrderMov"  style="">Закрепить за</span>
+
+                                        </div>
+
+                                        <div style="display:table-cell;width:67px;">
+                                        </div>
+
+                                        <div style="display:table-cell;">
+                                            <div  Id="divtbgiveto_Module_OrderMov" style="">
+                                                <input  id="tbgiveto_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:282,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div style="display:table-cell;padding:3px">
+                                            <a  id="btngiveto_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div  Id="RowFromRoom_Module_OrderMov" style="">
+                            <div style="display:table-cell;width:40px;">
+                            </div>
+
+                            <div style="display:table-cell;">
+                                <span style="">Из кабинета</span>
+
+                            </div>
+
+                            <div style="display:table-cell;width:49px;">
+                            </div>
+
+                            <div  Id="cellFromRoom_Module_OrderMov" style="display:table-cell;">
+                                <div  Id="divtbFromRoom_Module_OrderMov" style="display:inline-block;">
+                                    <input  id="tbFromRoom_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:295,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                </div>
+
+                            </div>
+
+                            <div style="display:table-cell;padding:3px">
+                                <a  id="btnFromRoom_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                            <div style="display:table-cell;width:82px;text-align:right">
+                                <span id="lblToRoom_Module_OrderMov"  style="">В кабинет</span>
+
+                            </div>
+
+                            <div  Id="cellToRoom_Module_OrderMov" style="display:table-cell;width:350px;text-align:right">
+                                <div  Id="divtxToRoom_Module_OrderMov" style="display:inline-block;">
+                                    <input  id="txToRoom_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:282,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                </div>
+
+                            </div>
+
+                            <div style="display:table-cell;padding:3px">
+                                <a  id="btnToRoom_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:40px;">
+                        </div>
+
+                        <div style="display:table-cell;">
+                            <span id="lblNotice_Module_OrderMov"  style="">Примечание</span>
+
+                        </div>
+
+                        <div style="display:table-cell;width:49px;">
+                        </div>
+
+                        <div  Id="cellInfo_Module_OrderMov" style="display:table-cell;width:785px;">
+                            <input  id="txNotice_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:784,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;padding:3px">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:580px;">
+                        </div>
+
+                        <div style="display:table-cell;">
+                            <span id="lblStts_Module_OrderMov"  style="">Статус заявки</span>
+
+                        </div>
+
+                        <div  Id="cellStts_Module_OrderMov" style="display:table-cell;width:280px;text-align:right">
+                            <select id="cbStatus_Module_OrderMov"  class="easyui-combobox" data-options="height:30,width:250,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                            </select>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;padding:3px">
+                    <div style="display:table-row;height:65px;">
+                        <div style="display:table-cell;width:510px;">
+                        </div>
+
+                        <div  Id="workuserblock_Module_OrderMov" style="">
+                            <div style="display:table-cell;width:100px;text-align:right">
+                                <span id="lblSolver_Module_OrderMov"  style="">Исполнитель</span>
+
+                            </div>
+
+                            <div  Id="cellSolver_Module_OrderMov" style="display:table-cell;width:300px;text-align:right">
+                                <div  Id="divtbSolver_Module_OrderMov" style="display:inline-block;">
+                                    <input  id="tbSolver_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:250,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                                </div>
+
+                            </div>
+
+                            <div style="display:table-cell;padding:3px">
+                                <a  id="btnSolver_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'...',iconAlign:'left',size:'small'"></a>
+
+                                <a  id="btnClear_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-cell;width:240px;text-align:right">
+                        <span style="">Список объектов для перемещения</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style=""><div style="display:table;width:100%;">
+            <div style="display:table-row;">
+                <div style="display:table-cell;">
+                </div>
+
+            </div>
+
+        </div>
+
+            <table  id="dgOrderMov_Module_OrderMov" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'orderid',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+            <tr><th data-options="title:'Ид.заявки',field:'orderid',width:85,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Ид.объекта',field:'objid',width:60,sortable:true,resizable:true"></th>
+                <th data-options="title:'Инвентарный номер',field:'invno',width:80,sortable:true,resizable:true"></th>
+                <th data-options="title:'Наименование',field:'name',width:200,sortable:true,resizable:true"></th>
+                <th data-options="title:'Закреплено',field:'owner',width:200,sortable:true,resizable:true"></th>
+            </tr></thead>
+            </table>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:79px;"><div style="display:table;width:100%;height:100%;">
+            <div style="display:table-row;padding:3px">
+                <div style="display:table-cell;padding:4px">
+                    <div  Id="divbtnAdd_Module_OrderMov" style="display:inline-block;">
+                        <a  id="btnAdd_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                    <a  id="btnChange_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnDelete_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;vertical-align:middle;padding:3px">
+                    <span style="">Создал</span>
+
+                    <input  id="txCreated_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    <span style="">Изменил</span>
+
+                    <input  id="txChanged_Module_OrderMov"  class="easyui-textbox" data-options="multiline:false,width:230,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+                <div style="display:table-cell;padding:3px;text-align:right;">
+                    <a  id="btnOk_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnCancel_Module_OrderMov"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

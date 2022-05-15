@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="MainFragment" th:remove="tag">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;width:100%;">
+            <div class="icon-editmode" style="display:table-cell;width:53px;height:53px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;width:150px;padding-left:5px;font-weight:bold;">
+                <span style="">АС Учёт</span>
+
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;text-align:right;padding:3px;">
+                <div sec:authorize="isAuthenticated()" th:remove="tag">
+                    <div style="display:inline;font-weight:bold;padding-right:5px;">
+                        <span style=""><span th:utext="${#session.getAttribute('UserName')}" th:remove="tag"></span> (<span sec:authentication="name" th:remove="tag"></span>)</span>
+                    </div>
+                    <div style="display:inline-block">
+                        <form id="LogOutForm_MainUI" th:action="@{/logout}" method="post">
+                            <a id="btnLogin_MainUI" href="javascript:void(0)" class="easyui-linkbutton"
+                               data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Выход из системы',iconAlign:'left',size:'small'"
+                               onClick="$('#LogOutForm_MainUI').submit()"></a>
+                        </form>
+                    </div>
+                </div>
+                <div sec:authorize="isAnonymous()" th:remove="tag">
+                    <a id="btnSignIn_MainUI"  th:href="@{/login}" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Вход в систему',iconAlign:'left',size:'small'"></a>
+                </div>
+            </div>
+
+        </div>
+
+        </div>
+        <div sec:authorize="isAuthenticated()" th:remove="tag">
+            <div data-options="region:'west',collapsible:false,split:true,title:'Задачи',border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:250px;height:100%;">
+                <ul   id="tvTasks_MainApp"  class="easyui-tree"  data-options="lines:true,method:'get',animate:false,checkbox:false,cascadeCheck:true,onlyLeafCheck:false,dnd:false"></ul>
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;">
+                <div id="tbTasks_MainAPP"  class="easyui-tabs" data-options="fit:true,plain:true,border:true,scrollIncrement:100,scrollDuration:400,tabPosition:'top',headerWith:150,tabHeight:27,selected:0,showHeader:true,justified:false,narrow:false,pill:false">
+                    <div  id="MainApp_TaskTab_News" data-options="content:'',cache:true,collapsible:false,closable:false,selected:false,disabled:false" title="Новости"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tt_Module_MainAPP"></div>
+</div>
+</body>
+</html>

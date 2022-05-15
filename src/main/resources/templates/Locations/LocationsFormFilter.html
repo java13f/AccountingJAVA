@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="LocationsFormFilter" class="easyui-window" id="wLocationsFormFilter_Module_Locations"  data-options="title:'Настройка фильтра',width:566,height:350,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;height:53px;">
+            <div  Id="pbEditMode_Locations_LocationsFormFilter" class="icon-filter" style="display:table-cell;width:55px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="font-weight:bold; padding:3px;">
+                    <span style="">Настройки фильтра месторасположений</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;">
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="display:table-cell;text-align:right">
+                    <span style="">Подразделение</span>
+
+                </div>
+
+                <div style="display:table-cell;padding: 3px;">
+                    <input  id="txDeps_Module_Locations_LocationsFormFilter"  class="easyui-textbox" data-options="multiline:false,width:400,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'left',iconWidth:18,buttonText:'',buttonIcon:'icon-search',buttonAlign:'right'" />
+
+                </div>
+
+                <div style="display:table-cell;">
+                    <a  id="btnCleanDeps_Module_Locations_LocationsFormFilter"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="display:table-cell;text-align:right">
+                    <span style="">Территория</span>
+
+                </div>
+
+                <div style="display:table-cell;padding: 3px;">
+                    <input  id="txKter_Module_Locations_LocationsFormFilter"  class="easyui-textbox" data-options="multiline:false,width:400,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'left',iconWidth:18,buttonText:'',buttonIcon:'icon-search',buttonAlign:'right'" />
+
+                </div>
+
+                <div style="display:table-cell;">
+                    <a  id="btnCleanKter_Module_Locations_LocationsFormFilter"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-clear',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:15px;">
+                </div>
+
+                <div style="display:table-cell;">
+                </div>
+
+                <div style="display:table-cell;padding:7px;">
+                    <input id="cbShowDel_Module_Locations_LocationsFormFilter" data-options="with:20,height:20,checked:false,disabled:false,label:'Показывать удалённые записи',labelWidth:330,labelPosition:'after',labelAlign:'left'" class="easyui-checkbox"/>
+
+                </div>
+
+                <div style="display:table-cell;">
+                </div>
+
+                <div style="display:table-cell;">
+                </div>
+
+            </div>
+
+        </div>
+
+            <div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;padding:7px;">
+                        <a  id="btnCleanFilter_Module_Locations_LocationsFormFilter"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:535,toggle:false,selected:false,plain:false,text:'Очистить фильтр',iconCls:'icon-',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:38px;"><div style="height:33px;;padding:3px; text-align:right;">
+            <a  id="btnOk_Module_Locations_LocationsFormFilter"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+            <a  id="btnCancel_Module_Locations_LocationsFormFilter"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

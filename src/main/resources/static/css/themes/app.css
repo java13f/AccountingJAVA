@@ -1,0 +1,23 @@
+.icon-addmode{
+    background:url('img/AddModeIcon.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-editmode{
+    background:url('img/EditModeIcon.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-KOKIconDirectory{
+    background:url('img/KOKIconDirectory.png') no-repeat center center;
+    background-size:cover;
+}
+.icon-KterIconDirectory{
+    background:url('img/KterIconDirectory.png') no-repeat center center;
+    background-size:cover;
+.icon-LogMainIconDirectory{
+    background:url('img/LogMainIconDirectory.png') no-repeat center center;						
+	background-size:cover;
+}
+.icon-UsersIconDirectory{
+    background:url('../imgs/users/UsersIconDirectory.png') no-repeat center center;
+    background-size:cover;
+}

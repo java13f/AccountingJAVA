@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div th:fragment="reffersForm" class="easyui-window" id="wReffersForm_Module_Reffers"  data-options="title:'Работа с записью справочника',width:600,height:370,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+
+    <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:false" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:57px;"><div style="height:55px;">
+            <div class="icon-addmode" style="display:table-cell;width:53px;height:53px;">
+            </div>
+
+            <div style="display:table-cell;vertical-align:middle;">
+                <div style="font-weight:bold;padding-left:15px;">
+                    <span id="lbReffer_Module_Reffers_ReffersForm"  style="">Справочник lbReffer_Module_Reffers_ReffersForm</span>
+
+                </div>
+
+                <div style="padding-left:15px;">
+                    <span id="lbAction_Module_Reffers_ReffersForm"  style="">lbAction_Module_Reffers_ReffersForm</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;width:100%;">
+            <div style="display:table-row;">
+                <div style="display:table-cell;width:150px;text-align:right;">
+                    <span style="">Ид. записи</span>
+
+                </div>
+
+                <div style="display:table-cell;padding:5px;">
+                    <input  id="txId_Module_Reffers_ReffersForm"  class="easyui-textbox" data-options="multiline:false,width:64,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+            </div>
+
+            <div  Id="pCode_Module_Reffers_ReffersForm" style="display:table-row;">
+                <div style="display:table-cell;text-align:right;">
+                    <span id="lbCode_Module_Reffers_ReffersForm"  style="">Код</span>
+
+                </div>
+
+                <div style="display:table-cell;padding:5px;">
+                    <input  id="txCode_Module_Reffers_ReffersForm"  class="easyui-textbox" data-options="multiline:false,width:128,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+            </div>
+
+            <div style="display:table-row;">
+                <div style="display:table-cell;text-align:right;">
+                    <span style="">Наименование</span>
+
+                </div>
+
+                <div style="display:table-cell;padding:5px;">
+                    <input  id="txName_Module_Reffers_ReffersForm"  class="easyui-textbox" data-options="multiline:false,width:600,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                </div>
+
+            </div>
+
+        </div>
+
+            <div style="height:155px;">
+                <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgReffersParams_Module_Reffers_ReffersForm" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+                <tr><th data-options="title:'Наименование',field:'name',width:250,sortable:false,resizable:true"></th>
+                    <th data-options="title:'Значение',field:'val',width:250,sortable:false,editor:'text',resizable:true"></th>
+                    <th data-options="title:'id',field:'id',width:20,hidden:true"></th>
+                    <th data-options="title:'refferTable',field:'refferTable',width:10,hidden:true"></th>
+                    <th data-options="title:'codeLen',field:'codeLen',hidden:true"></th>
+                    <th data-options="title:'isCodeDigit',field:'isCodeDigit',hidden:true"></th>
+                    <th data-options="title:'strict',field:'strict',hidden:true"></th>
+                    <th data-options="title:'paramCode',field:'paramCode',hidden:true"></th>
+                    <th data-options="title:'recId',field:'recId',hidden:true"></th>
+                    <th data-options="title:'imgFlag',field:'imgFlag',hidden:true"></th>
+                    <th data-options="title:'Рис',field:'imgView',width:20,halign:'center'"></th>
+                </tr></thead>
+                </table>
+
+                </div>
+            </div>
+
+            <div style="display:table;height:75px;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:150px;text-align:right;">
+                        <span style="">Создал</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:5px;">
+                        <input  id="txCreator_Module_Reffers_ReffersForm"  class="easyui-textbox" data-options="multiline:false,width:600,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;text-align:right;">
+                        <span style="">Изменил</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:5px;">
+                        <input  id="txChanger_Module_Reffers_ReffersForm"  class="easyui-textbox" data-options="multiline:false,width:600,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;height:37px;">
+            <div style="display:table-cell;padding-left:10px;">
+                <a  id="btnEdit_Module_Reffers_ReffersForm"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnDelete_Module_Reffers_ReffersForm"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отчистить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnView_Module_Reffers_ReffersForm"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Вид',iconCls:'icon-tip',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+            <div style="display:table-cell;width:150px;padding:3px;text-align:right;">
+                <a  id="btnOk_Module_Reffers_ReffersForm"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Ok',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_Module_Reffers_ReffersForm"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

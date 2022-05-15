@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="OrderListTypePermitsList" th:remove="tag" >
+
+    <div class="easyui-layout" style="width:100%;height:48%;" data-options="fit:false" >
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/orderListTypePermits/OrderListTypePermits.css}"/>
+
+            <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+                <div class="icon-orderListTypePermits" style="display:table-cell;width:53px;height:53px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;font-weight:bold;padding-left:5px;">
+                    <span style="">Отображение дополнительных реквизитов в заявках</span>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;">
+                <table  id="dgOrderTypeList_Module_OrderListTypePermits" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+            <tr><th data-options="title:'ID',field:'id',width:100,sortable:false,resizable:true,fixed:true"></th>
+                <th data-options="title:'Наименование',field:'name',width:10000,sortable:false,resizable:true"></th>
+            </tr></thead>
+            </table>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:30px;"><div style="display:table;width:100%;">
+                <div style="display:table-cell;padding:3px;">
+                    <span style="">Дополнительные реквизиты в заявках</span>
+
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+
+        <div class="easyui-layout" style="width:100%;height:50%;" data-options="fit:false" >
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><table  id="dgListParams_Module_OrderListTypePermits" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%"><thead >
+            <tr><th data-options="title:'ID',field:'id',width:100,sortable:true,resizable:true,fixed:true"></th>
+                <th data-options="title:'Наименование реквезита',field:'listParamId',width:10000,sortable:true,resizable:true"></th>
+                <th data-options="title:'Тип заявки',field:'orderTypeId',width:10000,sortable:true,resizable:true"></th>
+                <th data-options="title:'Видимый',field:'visible',width:100,sortable:true,resizable:false,fixed:true"></th>
+            </tr></thead>
+            </table>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+                <div style="display:table-cell;padding:3px;">
+                    <a  id="btnAdd_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnChange_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnDelete_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnUpdate_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>
+
+                    <div style="display:inline-block;padding-left:5px;font-weight:bold;">
+                        <span style="">Фильтр:</span>
+
+                        <input  id="txFilter_Module_OrderListTypePermits"  class="easyui-textbox" data-options="multiline:false,width:115,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <a  id="btnClearFilter_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+                <div  Id="pOkCancel_Module_OrderListTypePermits" style="display:table-cell;width:150px;padding:3px;text-align:right;visibility:hidden">
+                    <a  id="btnOk_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'ОК',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnCancel_Module_OrderListTypePermits"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+
+
+</body>
+</html>

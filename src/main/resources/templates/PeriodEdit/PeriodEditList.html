@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="PeriodEditList" class="easyui-window" id="wPeriodEditList_Module_PeriodEdit"  data-options="title:'Редактирование периодического реквизита',width:900,height:556,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,iconCls:'icon-edit',noheader:false,collapsed:false,minimized:false,maximized:false">
+    <link rel="stylesheet" type="text/css" th:href="@{css/imgs/periodedit/periodedit.css}"/>
+    <div  class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+        <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:58px;">
+            <div style="display:table;">
+            <div style="display:table-cell;width:56px;height:56px;" class="icon-PeriodEditListClock"></div>
+            <div style="display:table-cell;font-weight: bold; padding-left: 5px; vertical-align: middle;">
+                <span id="wPeriodEditPrdVls_Module_PeriodEdit" style="display: inline-block;">Периодический реквизит </span><span style="font-weight: initial;margin-left: 30px;font-style: oblique;" id="wPeriodEditData_Module_PeriodEdit"></span>
+                <span style="display: block; font-size: 13.5px; font-weight: normal; margin-top: 3px;">Изменение периодического реквизита </span><!--(возвращает самое актуальное по дате значение реквизита)-->
+            </div>
+        </div>
+        </div>
+        <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:411px;">
+        <table id="dgPeriodEdit_Module_PeriodEdit" class="easyui-datagrid" data-options="fitColumns:true,autoRowHeight:true,striped:false,method:'get',nowrap:true,idField:'id',loadMsg:'Идёт згрузка, пожалуйста подождите...',emptyMsg:'',pagination:false,rownumbers:false,singleSelect:true,ctrlSelect:false,checkOnSelect:true,selectOnCheck:true,scrollOnSelect:true,sortOrder:'asc',multiSort:false,remoteSort:false,showHeader:true,showFooter:false,scrollbarSize:18,rownumberWidth:30,editorHeight:24" width="100%" height="100%">
+            <thead>
+                <tr>
+                    <th data-options="title:'ID',field:'id',width:50,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Дата и время',field:'fdate',width:185,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Наименование',field:'name',width:610,sortable:true,resizable:true,fixed:true"></th>
+                    <th data-options="title:'Вид',field:'view',width:35,sortable:'false',resizable:'true',fixed:'true'"></th><!--,styler:cellStyler-->
+                </tr>
+            </thead>
+        </table>
+        </div>
+        <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:48px;padding-top: 5px;"><div style="display:table;width:100%;">
+            <div style="display:table-cell;padding-left: 3px">
+                <a  id="btnAdd_Module_PeriodEdit" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Добавить',iconCls:'icon-add',iconAlign:'left',size:'small'"></a>
+                <a  id="btnChange_Module_PeriodEdit" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Изменить',iconCls:'icon-edit',iconAlign:'left',size:'small'"></a>
+                <a  id="btnDelete_Module_PeriodEdit" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Удалить',iconCls:'icon-remove',iconAlign:'left',size:'small'"></a>
+                <!--<a  id="btnUpdate_Module_PeriodEdit" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'Обновить',iconCls:'icon-reload',iconAlign:'left',size:'small'"></a>-->
+            </div>
+            <div style="display:table-cell;padding: 3px; text-align: right; width: 150px">
+                <a  id="btnOk_Module_PeriodEdit" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:true,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+                <a  id="btnCancel_Module_PeridoEdit" href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      /*  function cellStyler1(value,row,index){
+            return 'background-color:rgb(64,199,129); box-shadow: 0 -3px rgb(53,167,110) inset; transition: 0.2s; color:white; cursor: pointer; border-radius: 7px;';
+        }
+      */
+    </script>
+</div>
+
+</body>
+</html>

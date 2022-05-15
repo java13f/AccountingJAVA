@@ -1,0 +1,25 @@
+.icon-PeriodEditListClock{
+    background:url('./clock.png') no-repeat center center;
+    background-size:cover;
+}
+
+.icon-PeriodEditFormLamp{
+    background:url('./lamp2.png') no-repeat center center;
+    background-size:cover;
+}
+
+.datagrid-row > td[field='view'] {
+    background-color: rgb(181, 183, 182);
+    box-shadow: 0 -3px rgb(131, 136, 133) inset;
+    transition: 0.2s;
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.datagrid-row > td[field='view']:hover {
+    background: rgb(151, 155, 153) !important;
+}
+.datagrid-row > td[field='view']:active {
+    background: rgb(121, 123, 122) !important;
+    box-shadow: 0 3px rgb(169, 172, 170) inset !important;
+}

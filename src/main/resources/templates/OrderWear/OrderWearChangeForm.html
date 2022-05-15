@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OrderWear</title>
+</head>
+<body>
+<div th:fragment="OrderWearChangeForm" th:remove="tag">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/imgs/orderwear/orderwear.css}"/>
+    <div class="easyui-window" id="wOrderWearChange_Module_OrderWear"  data-options="title:'Работа с записью',width:518,height:320,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:true,shadow:true,inline:false,modal:true,border:true,constrain:false,noheader:false,collapsed:false,minimized:false,maximized:false">
+        <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:55px;"><div style="display:table;">
+                <div class="icon-editwear" style="display:table-cell;width:53px;height:53px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;padding:3px;font-weight:bold;">
+                    <span id="lbTitle_Module_OrderWearChange" style="">Работа с записью</span>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;text-align:right;padding:20px 3px 10px;">
+                        <span style="">Ид:</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:20px 3px 10px;">
+                        <input  id="tbId_Module_OrderWearChange"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:true,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:15px;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;width:60px;text-align:right;padding:20px 3px 10px;">
+                        <span style="">Объект:</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:20px 3px 10px;">
+                        <input  id="tbObj_Module_OrderWearChange"  class="easyui-textbox" data-options="multiline:false,width:370,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:true,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'"  type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;padding:20px 3px 10px;">
+                        <a  id="btnAddObj_Module_OrderWearChange"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-search',iconAlign:'left',size:'small'"></a>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table-row;">
+                    <div style="display:table-cell;">
+                    </div>
+
+                    <div style="display:table-cell;vertical-align:middle;text-align:right;padding:20px 3px 10px;">
+                        <span style="">Сумма:</span>
+
+                    </div>
+
+                    <div style="display:table-cell;padding:20px 3px 10px;">
+                        <input  id="tbAmount_Module_OrderWearChange"  class="easyui-numberbox"
+                                data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right', precision:2, decimalSeparator: ',', groupSeparator:' '"
+                                type="text"/>
+
+                    </div>
+
+                    <div style="display:table-cell;">
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:39px;"><div style="display:table;width:100%;">
+                <div style="display:table-cell;text-align:right;padding:3px;">
+                    <a  id="btnOk_Module_OrderWearChange"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                    <a  id="btnCancel_Module_OrderWearChange"  href="javascript:void(0);" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

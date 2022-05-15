@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="OrderRepairsForm" th:remove="tag">
+    <div class="easyui-window" id="wOrderRepairsForm_Module_OrderRepairs"  data-options="title:'Заявка на ремонт',width:805,height:480,collapsible:false,minimizable:false,maximizable:false,closable:true,closed:false,zIndex:9000,draggable:true,resizable:false,shadow:true,inline:false,modal:true,border:true,constrain:false,noheader:false,collapsed:false,minimized:false,maximized:false">
+        <div class="easyui-layout" style="width:100%;height:100%;" data-options="fit:true" >
+            <div data-options="region:'north',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:48px;"><div style="display:table;height:46px;">
+                <div  Id="pbEditMode_Module_OrderRepairs" class="icon-OrderRepairsIconDirectory" style="display:table-cell;width:58px;">
+                </div>
+
+                <div style="display:table-cell;vertical-align:middle;">
+                    <div  Id="lblAction_Module_OrderRepairs" style="font-weight:bold; padding:5px;">
+                        <span style="font-family:Microsoft Sans Serif;font-size:21,75pt;">Заявка на ремонт компьютерной техники</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+            <div data-options="region:'center',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:100%;"><div class="easyui-tabs" data-options="fit:true,plain:true,border:true,scrollIncrement:100,scrollDuration:400,tabPosition:'top',headerWith:150,tabHeight:27,selected:0,showHeader:true,justified:false,narrow:false,pill:false"><div data-options="content:'',cache:true,collapsible:false,closable:false,selected:false,disabled:false" title="Данные"><div style="display:table;">
+                <div style="display:table-row;">
+                    <div style="display:table-cell;width:10px;">
+                    </div>
+
+                    <div  Id="pnOrderDate_Module_OrderRepairs" style="display:table-cell;">
+                        <div style="display:table-cell;width:150px;text-align:right">
+                            <span style="">Дата заявки</span>
+
+                        </div>
+
+                        <div  Id="divtbOrderDate_Module_OrderRepairs" style="display:table-cell;padding:1px 0px 0px 5px">
+                            <input id="dbOrderDate_Module_OrderRepairs"  type="text" class="easyui-datebox" data-options="panelWidth:250,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:false,editable:false"/>
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-cell;width:60px;text-align: left">
+                    </div>
+
+                    <div  Id="pnOrderNumber_Module_OrderRepairs" style="display:table-cell;">
+                        <div style="display:table-cell;text-align: left">
+                            <span style="">Номер заявки</span>
+
+                        </div>
+
+                        <div  Id="divtbOrderNumber_Module_OrderRepairs" style="display:table-cell;padding:1px 0px 0px 5px">
+                            <input  id="txOrderNumber_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,prompt:'',value:'',type:'text',editable:false,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+                <div style="display:table;padding:1px">
+                    <div  Id="pnObject_Module_OrderRepairs" style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;width:150px;text-align:right">
+                            <span style="">Прошу отремонтировать</span>
+
+                        </div>
+
+                        <div  Id="divtbObject_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <input  id="txObject_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:580,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                            <div style="display:table-cell;">
+                                <a  id="btnObject_Module_OrderRepairs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-search',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div  Id="pnName_Module_OrderRepairs" style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;width:150px;text-align:right">
+                            <span style="">ФИО (иниц. заявки)</span>
+
+                        </div>
+
+                        <div  Id="divtbName_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <input  id="txName_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:580,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                            <div style="display:table-cell;">
+                                <a  id="btnName_Module_OrderRepairs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-search',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div  Id="pnExecutive_Module_OrderRepairs" style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;width:150px;text-align:right">
+                            <span style="">Исполнитель заявки</span>
+
+                        </div>
+
+                        <div  Id="divtbExecutive_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <input  id="txExecutive_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:580,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                            <div style="display:table-cell;">
+                                <a  id="btnExecutive_Module_OrderRepairs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-search',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div  Id="pnDepCode_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:150px;text-align:right">
+                                <span style="">Код подразделения</span>
+
+                            </div>
+
+                            <div  Id="divtbDepCode_Module_OrderRepairs" style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <input  id="txDepCode_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:343,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                        </div>
+
+                        <div  Id="pnInvNo_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:72px;text-align:right">
+                                <span style="">Инв. номер</span>
+
+                            </div>
+
+                            <div  Id="divtbInvNo_Module_OrderRepairs" style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <input  id="txInvNo_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:160,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div  Id="pnPhone_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:150px;text-align:right">
+                                <span style="">Телефон</span>
+
+                            </div>
+
+                            <div  Id="divtbPhone_Module_OrderRepairs" style="display:table-cell;padding: 2px 0px 0px 5px">
+                                <input  id="txPhone_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:303,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                        </div>
+
+                        <div  Id="pnCost_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:113px;text-align:right">
+                                <span style=""> Стоимость заявки</span>
+
+                            </div>
+
+                            <div  Id="divtbCost_Module_OrderRepairs" style="display:table-cell;padding: 2px 0px 0px 5px">
+                                <input  id="txCost_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:160,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                        </div>
+
+                        <div style="display:table-cell;width:30px;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div  Id="pnProblemCode_Module_OrderRepairs" style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;width:150px;text-align:right">
+                            <span style="">Код проблемы</span>
+
+                        </div>
+
+                        <div  Id="divtbProblems_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <input  id="txProblemCode_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:580,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                            <div style="display:table-cell;height:33px;;">
+                                <a  id="btnProblems_Module_OrderRepairs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,toggle:false,selected:false,plain:false,text:'',iconCls:'icon-search',iconAlign:'left',size:'small'"></a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div  Id="pnProblemDescr_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:150px;text-align:right">
+                                <span style="">Описание проблемы</span>
+
+                            </div>
+
+                            <div style="display:table-cell;padding: 1px 0px 0px 5px">
+                                <input  id="txProblemDescr_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:580,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div  Id="pnProblemSolutionDescr_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:150px;text-align:right">
+                                <span style="">Описание решения проб.</span>
+
+                            </div>
+
+                            <div  Id="divtbProblemSolutionDescr_Module_OrderRepairs" style="display:table-cell;padding: 2px 0px 0px 5px">
+                                <input  id="txProblemSolutionDescr_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:580,prompt:'',value:'',type:'text',editable:true,disabled:false,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div style="display:table;">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:10px;">
+                        </div>
+
+                        <div style="display:table-cell;width:150px;text-align:right">
+                            <span style="">Статус</span>
+
+                        </div>
+
+                        <div  Id="pnStts_Module_OrderRepairs" style="display:table-cell;">
+                            <div  Id="divtbStts_Module_OrderRepairs" style="display:table-cell;padding: 2px 2px 0px 5px">
+                                <select id="cmbStts_Module_OrderRepairs"  class="easyui-combobox" data-options="height:30,width:260,panelHeight:200,selectOnNavigation:true,editable:false,disabled:false,readonly:false,value:'',valueField:'value',textField:'text'">
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div style="display:table-cell;width:15px;">
+                        </div>
+
+                        <div  Id="pnCloseOrderDate_Module_OrderRepairs" style="display:table-cell;">
+                            <div style="display:table-cell;width:100px;text-align:left">
+                                <span style="">Закрытие заявки</span>
+
+                            </div>
+
+                            <div style="display:table-cell;padding:1px 2px 0px 3px">
+                                <input id="chkCloseOrderDate_Module_OrderRepairs" data-options="with:20,height:20,checked:false,disabled:false,labelPosition:'before',labelAlign:'left'" class="easyui-checkbox"/>
+
+                            </div>
+
+                            <div  Id="divtbCloseOrderDate_Module_OrderRepairs" style="display:table-cell;padding: 2px 0px 0px 5px">
+                                <input id="dbCloseOrderDate_Module_OrderRepairs"  type="text" class="easyui-datebox" data-options="panelWidth:200,currentText:'Сегодня',closeText:'Закрыть',okText:'Ок',disabled:true,editable:false"/>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+                <div data-options="content:'',cache:true,collapsible:false,closable:false,selected:false,disabled:false" title="Логи"><div style="display:table;padding: 1px">
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;width:120px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align: left;padding: 3px;">
+                            <span style="">Создал</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding: 2px;">
+                            <input  id="txCreator_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                        </div>
+
+                        <div style="display:table-cell;width:100px;">
+                        </div>
+
+                        <div style="display:table-cell;text-align: left;padding: 3px;">
+                            <span style="">Создано</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding: 2px;">
+                            <input  id="txCreated_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                        </div>
+
+                    </div>
+
+                    <div style="display:table-row;">
+                        <div style="display:table-cell;">
+                        </div>
+
+                        <div style="display:table-cell;text-align: right;padding: 0px;">
+                            <span style="">Изменил</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding: 2px;">
+                            <input  id="txChanger_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                        </div>
+
+                        <div style="display:table-cell;">
+                        </div>
+
+                        <div style="display:table-cell;width:50px;text-align: right;padding: 3px;">
+                            <span style="">Изменено</span>
+
+                        </div>
+
+                        <div style="display:table-cell;padding: 2px;">
+                            <input  id="txChanged_Module_OrderRepairs"  class="easyui-textbox" data-options="multiline:false,width:180,prompt:'',value:'',type:'text',editable:false,disabled:true,readonly:false,iconAlign:'right',iconWidth:18,buttonText:'',buttonIcon:'',buttonAlign:'right'" />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </div>
+            </div>
+
+            </div>
+            <div data-options="region:'south',collapsible:false,split:false,border:true,minWidth:10,minHeight:10,maxWidth:10000,maxHeight:10000,expandMode:'float',collapsedSize:28,hideExpandTool:false,hideCollapsedContent:true,iconCls:null,href:null" style="width:100%;height:33px;"><div style="height:30px;;text-align: center;">
+                <a  id="btnOk_Module_OrderRepairs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'OK',iconCls:'icon-ok',iconAlign:'left',size:'small'"></a>
+
+                <a  id="btnCancel_Module_OrderRepairs"  href="javascript:void(0)" class="easyui-linkbutton" data-options="disabled:false,width:80,toggle:false,selected:false,plain:false,text:'Отмена',iconCls:'icon-cancel',iconAlign:'left',size:'small'"></a>
+
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
